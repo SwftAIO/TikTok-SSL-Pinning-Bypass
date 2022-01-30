@@ -4,6 +4,9 @@
 	
 	To run, run the following command:
 	frida -U -f com.zhiliaoapp.musically --no-pause -l tiktoksslbypass.js
+
+	Please note this will only work on Jailbroken iOS devices. You must have frida installed prior to running this script.
+
 */
 
 Interceptor.attach(ObjC.classes.TTHttpTask["- skipSSLCertificateError"].implementation, {
